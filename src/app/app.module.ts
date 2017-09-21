@@ -1,10 +1,13 @@
+import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './app.component';
 import { PageQuemSomosComponent } from './page-quem-somos/page-quem-somos.component';
 import { PageContatoComponent } from './page-contato/page-contato.component';
+import { PageContatoModule } from './page-contato/page-contato.module';
 import { PageVisaoComponent } from './page-visao/page-visao.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
 	declarations: [
@@ -14,7 +17,13 @@ import { PageVisaoComponent } from './page-visao/page-visao.component';
 		PageVisaoComponent
 	],
 	imports: [
-		BrowserModule
+		BrowserModule,
+		HttpModule,
+		RouterModule,
+		PageContatoModule,
+		RouterModule.forRoot([
+
+		])
 	],
 	providers: [],
 	bootstrap: [AppComponent]
