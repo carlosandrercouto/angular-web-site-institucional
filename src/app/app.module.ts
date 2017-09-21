@@ -1,26 +1,28 @@
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
-import { PageQuemSomosComponent } from './page-quem-somos/page-quem-somos.component';
-import { PageContatoComponent } from './page-contato/page-contato.component';
-import { PageContatoModule } from './page-contato/page-contato.module';
-import { PageVisaoComponent } from './page-visao/page-visao.component';
 import { RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';
+
+import { QuemSomosComponent } from './quem-somos/quem-somos.component';
+import { ContatoComponent } from './contato/contato.component';
+import { NossaVisaoComponent } from './nossa-visao/nossa-visao.component';
+
+import { ContatoModule } from './contato/contato.module';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		PageQuemSomosComponent,
-		PageContatoComponent,
-		PageVisaoComponent
+		QuemSomosComponent,
+		NossaVisaoComponent,
 	],
 	imports: [
 		BrowserModule,
+		FormsModule,
 		HttpModule,
 		RouterModule,
-		PageContatoModule,
+		ContatoModule,
 		RouterModule.forRoot([
 
 		])
@@ -28,4 +30,6 @@ import { RouterModule } from '@angular/router';
 	providers: [],
 	bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }
