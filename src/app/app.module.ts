@@ -5,15 +5,13 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { NossaVisaoComponent } from './nossa-visao/nossa-visao.component';
-
 import { ContatoModule } from './contato/contato.module';
 import { QuemSomosModule } from './quem-somos/quem-somos.module';
+import { NossaVisaoModule } from './nossa-visao/nossa-visao.module';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		NossaVisaoComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -22,6 +20,7 @@ import { QuemSomosModule } from './quem-somos/quem-somos.module';
 		RouterModule,
 		ContatoModule,
 		QuemSomosModule,
+		NossaVisaoModule,
 		RouterModule.forRoot([
 
 		])
