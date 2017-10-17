@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ContatoComponent } from './contato.component';
+import { NossaVisaoComponent } from './nossa-visao.component';
 
 @NgModule({
 	imports: [
 		RouterModule.forChild([
 			{
-				path: 'contato', component: ContatoComponent
+				path: 'nossa-visao', component: NossaVisaoComponent
 			}
 		])
 	],
@@ -14,6 +14,6 @@ import { ContatoComponent } from './contato.component';
 		RouterModule
 	]
 })
-export class ContatoRoutingModule{
+export class NossaVisaoRoutingModule{
 
 }
